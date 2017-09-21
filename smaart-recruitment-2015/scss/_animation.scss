@@ -1,0 +1,45 @@
+/* CSS3 Keyframe animations */ 
+@keyframes grain {
+  0%{ transform: translate(0%, 20%); }
+    
+  20%{ transform: translate(-0%, -20%); }
+    
+  40%{ transform: translate(0%, 20%); }
+    
+  60%{ transform: translate(-0%, -20%); }
+    
+  80%{ transform: translate(0%, 20%); }
+
+  100%{ transform: translate(0%, -20%); }
+
+}
+
+@-webkit-keyframes grain {
+  0%{ -webkit-transform: translate(0%, 20%); }
+    
+  20%{ -webkit-transform: translate(-0%, -20%); }
+    
+  40%{ -webkit-transform: translate(0%, 20%); }
+    
+  60%{ -webkit-transform: translate(-0%, -20%); }
+    
+  80%{ -webkit-transform: translate(0%, 20%); }
+
+  100%{ -webkit-transform: translate(0%, -20%); }
+
+}
+
+@-moz-keyframes grain {
+  0%{ -moz-transform: translate(0%, 20%); }
+    
+  20%{ -moz-transform: translate(-0%, -20%); }
+    
+  40%{ -moz-transform: translate(0%, 20%); }
+    
+  60%{ -moz-transform: translate(-0%, -20%); }
+    
+  80%{ -moz-transform: translate(0%, 20%); }
+
+  100%{ -moz-transform: translate(0%, -20%); }
+
+}

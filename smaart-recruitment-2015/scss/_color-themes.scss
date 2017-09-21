@@ -1,0 +1,241 @@
+/* Color themes */
+// Color theme 1: is default with white bg and blue color
+.h_section{
+	.owl-prev,.owl-next{
+		color: $color-1;
+		&:hover{ color: $color-1 - 20; }
+	}
+	.owl-dot{
+		span{
+			border-color: $color-1;
+		}
+		&:hover span, &.active span{
+			background-color: $color-1;
+		}
+	}
+}
+.video-blocks{
+	[class*='icon-']{
+		color:$color-bright;
+		&:hover{
+			color:$color-1;
+		}
+	}
+}
+// Color theme 2: light gray bg and orange color
+.color-theme-2{
+	background-color: $color-bright - 7;
+	h2{
+		color: $color-2;	
+		&:after{
+			background-color: $color-2;
+		}
+	}
+	.icon-wrap{
+		border-color: $color-2;
+		i{
+			color: $color-2;
+		}
+	}
+	.btn{
+		border-color: $color-2;
+		color:$color-2;
+		&:hover{
+			background-color: $color-2;
+		}
+	}
+	.owl-prev,.owl-next{
+		color: $color-2;
+		&:hover{ color: $color-2 - 20; }
+	}
+	.owl-dot{
+		span{
+			border-color: $color-2;
+		}
+		&:hover span, &.active span{
+			background-color: $color-2;
+		}
+	}
+}
+
+.color-theme-3{
+	color: $color-bright;
+	h2{
+		color:$color-bright;
+		&:after{
+			background-color:$color-bright;
+		}
+	}
+	h3{
+		color:$color-dark;
+		span{
+			color:$color-bright;
+		}
+	}
+	.icon-wrap{
+		border-color: $color-bright;
+		i{
+			color: $color-bright;
+		}
+	}
+	.btn{
+		border-color: $color-bright;
+		color:$color-bright;
+		&:hover{
+			background-color: $color-bright;
+			color: $color-dark;
+		}
+	}
+	.owl-prev,.owl-next{
+		color: $color-bright;
+		&:hover{ color: $color-bright - 20; }
+	}
+	.owl-dot{
+		span{
+			border-color: $color-bright;
+		}
+		&:hover span, &.active span{
+			background-color: $color-bright;
+		}
+	}
+	.more-link{
+		color: $color-bright;
+		&:hover{
+			color:$color-dark;
+			text-decoration: underline;
+		}	
+	}
+}
+
+.color-theme-4{
+	background-color: $color-dark + 53;
+	color: $color-bright;
+	h2{
+		color: $color-bright;
+	}
+	h3{
+		color: $color-1;
+	}
+	.owl-dot{
+		span{
+			border-color: $color-bright;
+		}
+		&:hover span, &.active span{
+			background-color: $color-bright;
+		}
+	}
+}
+
+.color-theme-5{
+	@extend .color-theme-3;
+	background-color: $color-1!important;
+	
+	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	    color: #65d8f3;
+	}
+
+	input:-moz-placeholder, textarea:-moz-placeholder {
+	    color: #65d8f3;
+	}
+
+	input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+	    color: #65d8f3;
+	}
+
+	a[class*='icon-']{
+		color:$color-bright;
+		&:hover{
+			color:$color-dark;
+		}
+	}
+	h4{
+		color:$color-bright;
+	}
+	a{
+		color:$color-bright;
+		&:hover{
+			color: $color-dark;
+		}
+	}
+}
+
+.color-theme-6{
+	background-color: $color-2!important;
+	color: $color-bright!important;
+	h2{
+		color:$color-bright;
+		&:after{
+			background-color:$color-bright;
+		}
+	}
+	h3{
+		color:$color-dark;
+		span{
+			color:$color-bright;
+		}
+	}
+	.icon-wrap{
+		border-color: $color-bright;
+		i{
+			color: $color-bright;
+		}
+	}
+	.btn{
+		border-color: $color-bright;
+		color:$color-bright;
+		&:hover{
+			background-color: $color-bright;
+			color: $color-dark;
+		}
+	}
+	.owl-prev,.owl-next{
+		color: $color-bright;
+		&:hover{ color: $color-bright - 20; }
+	}
+	.owl-dot{
+		span{
+			border-color: $color-bright;
+		}
+		&:hover span, &.active span{
+			background-color: $color-bright;
+		}
+	}
+	.more-link{
+		color: $color-bright;
+		&:hover{
+			color:$color-dark;
+			text-decoration: underline;
+		}	
+	}
+	a[class*='icon-']{
+		color:$color-2;
+		&:hover{
+			color:$color-bright;
+		}
+	}
+}
+
+.color-1{
+	.map{
+		border-color: $color-1;
+	}
+	h3,label{
+		color: $color-1;
+	}
+}
+.color-5{
+	.map, .box-bdr{
+		border-color: $color-1;
+	}
+	h3,label{
+		color: $color-1;
+	}
+}
+.color-6{
+	.map, .box-bdr{
+		border-color: $color-2;
+	}
+	h3,label{
+		color: $color-2;
+	}
+}

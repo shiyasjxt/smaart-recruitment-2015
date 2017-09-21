@@ -1,0 +1,208 @@
+ /*
+ * Mixin for easy media queries
+ * @include bp(tablet) { SCSS here };
+ * Default css is for big screen > 1300px width
+ * widescreen value 1600 for panning feature
+*/
+@mixin bp($point) {
+
+	@if $point == lg {
+		@media (min-width : 1500px) { @content; }
+	}
+	@if $point == md {
+		@media (max-width : 1199px) { @content; }
+	}
+	@if $point == sm {
+		@media (max-width : 991px) { @content; }
+	}
+	@else if $point == xs {
+		@media (max-width: 767px) { @content; }
+	}
+	@else if $point == mobile-portrait {
+		@media (max-width : 479px) { @content; }
+	}
+	@else if $point == mobile-mini {
+		@media (max-width : 320px){ @content; }
+	}
+	@if $point == retina {
+		@media (-webkit-min-device-pixel-ratio: 2) { @content; }
+	}
+}
+
+/*
+* Mixing for Touch device 
+* wrap element with html.notouch
+* @include notouch {}
+* Learned it after long way... just need to add '&'
+*/
+@mixin notouch {
+	html.no-touch & { @content; }
+}
+
+/*
+ * Mixin for micro clearfix
+ * @include microclearfix;
+*/
+@mixin microclearfix {
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+	*zoom: 1;
+}
+
+/*
+ * @include background-size($size:cover);
+*/
+@mixin background-size($size) {	
+	-webkit-background-size: $size;
+	-moz-background-size: $size;
+	-o-background-size: $size;
+	background-size: $size;
+}
+
+/*
+ * @include box-sizing;
+*/
+@mixin box-sizing() {	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+/*
+ * Mixin for CSS3 transition
+ * @include transition($property:all, $duration:0.2s, $function:ease);
+*/
+@mixin transition($property, $duration, $function:linear) {	
+	-webkit-transition: $property $duration $function;
+	-moz-transition: $property $duration $function;
+	-ms-transition: $property $duration $function;
+	-o-transition: $property $duration $function;
+	transition: $property $duration $function;
+}
+
+/*
+ * Mixin for CSS3 transition Delay
+ * @include transitionDelay($delay);
+*/
+@mixin transitionDelay($delay) {	
+    -webkit-transition-delay: $delay; /* Safari */
+    -moz-transition-delay: $delay;
+    -o-transition-delay: $delay;
+    -ms-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
+/* rotate mixin
+ * use of keyframes mixin
+ * @include rotate($deg:0deg);
+*/
+@mixin rotate($deg:0deg) {
+	transform: rotate($deg);
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+}
+
+/* rotate mixin
+ * use of keyframes mixin
+ * @include scale($value:1);
+*/
+@mixin scale($value:1) {
+	-webkit-transform: scale($value);
+	-moz-transform: scale($value);
+	-ms-transform: scale($value);
+	-o-transform: scale($value);
+	transform: scale($value);
+}
+
+/* @include translate($x,$y);
+*/
+@mixin translate($x,$y) {
+	transform:translate($x,$y);
+ 	-webkit-transform:translate($x,$y);
+ 	-moz-transform:translate($x,$y);
+	-o-transform:translate($x,$y);
+	-ms-transform:translate($x,$y);
+}
+
+/* @include translateX($x);
+*/
+@mixin translateX($x) {
+	transform:translateX($x);
+ 	-webkit-transform:translateX($x);
+ 	-moz-transform:translateX($x);
+	-o-transform:translateX($x);
+	-ms-transform:translateX($x);
+}
+
+/* @include translateY($y);
+*/
+@mixin translateY($y) {
+	transform:translateY($y);
+ 	-webkit-transform:translateY($y);
+ 	-moz-transform:translateY($y);
+	-o-transform:translateY($y);
+	-ms-transform:translateY($y);
+}
+
+
+/* keyframes mixin
+ * use of keyframes mixin
+ * @include keyframes(rotate){}
+*/
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+/* animation mixin
+ * @include aniamtion($animationName,$duration,$iteration,$function);
+*/
+@mixin aniamtion($animationName,$duration,$iteration,$function) {
+    -webkit-animation: $animationName $duration	$iteration $function forwards;
+	-moz-animation: $animationName $duration $iteration $function forwards;
+	-ms-animation: $animationName $duration	$iteration $function forwards;
+	-o-animation: $animationName $duration $iteration $function forwards;
+	animation: $animationName $duration	$iteration $function forwards;
+}
+/*
+ * Mixin for reset list property
+ * @include resetlist;
+*/
+@mixin resetlist{	
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+/*
+ * @font-face mixin
+ * Bulletproof font-face via Font Squirrel
+ * @include fontface('family', 'assets/fonts/', 'myfontname');
+ */
+
+@mixin fontface($font-family, $font-url, $font-name) {
+	@font-face {
+		font: {
+			family: $font-family;
+			style: normal;
+			weight: normal;
+		}
+		src: url($font-url + '/' + $font-name + '.eot');
+		src: url($font-url + '/' + $font-name + '.eot#iefix') format('embedded-opentype'),
+			 url($font-url + '/' + $font-name + '.woff') format('woff'),
+			 url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');
+	}
+}

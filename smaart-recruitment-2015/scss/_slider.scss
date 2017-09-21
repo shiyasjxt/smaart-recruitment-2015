@@ -1,0 +1,177 @@
+// Homepage slider with parallax effect
+
+.home_banner{
+	color: $color-bright;
+	overflow: hidden;
+	h1{
+		color: $color-bright;
+		font: 67px/1 $thinfont;
+		strong{
+			font-family: $headfont;
+			display: block;
+		}
+	}
+	.item{
+		padding-top: 160px;
+		overflow: hidden;
+		display: none;
+		&.current{
+			display: block;
+		}
+	}
+	.row{
+		height: 690px;
+		position: relative;
+	}
+	.owl-controls{
+		display: none;
+	}
+	@include bp(md){
+		h1{
+			font-size: 55px;
+		}
+		.item{
+			padding-top: 135px;
+		}
+	}
+	@include bp(sm){
+		h1{
+			font-size: 45px;
+		}
+		.item{
+			padding-top: 0px;	
+		}
+		.row{
+			height: auto;
+		}
+	}
+	@include bp(xs){
+		h1{
+			font-size: 38px;
+		}
+	}
+
+}
+.slide-text{
+	padding-top: 180px;
+	@include bp(sm){
+		padding: 60px 0;
+		text-align: center;
+		p{
+			display: none;
+		}
+	}
+	@include bp(xs){
+		padding: 40px 0 20px;
+	}
+}
+
+.animate-wrap{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height: 100%;
+	>div{
+		position: absolute;
+		@include transition($property:all, $duration:0.1s, $function:linear);
+	}
+}
+.balloon{
+	background: url('../images/balloon.png') no-repeat;
+	height: 454px;
+	width: 358px;
+	bottom: 155px;
+	left: 175px;
+}
+.mountain{
+	background: url('../images/mountain.png') no-repeat;
+	height: 136px;
+	width: 585px;
+	bottom: -20px;
+	left: 62px;
+}
+.sun{
+	background: url('../images/sun.png') no-repeat;
+	height: 120px;
+	width: 119px;
+	top: 80px;
+	left: 15px;
+}
+.cloud-1{
+	background: url('../images/cloud-1.png') no-repeat;
+	height: 182px;
+	width: 202px;
+	bottom: 230px;
+	left: -50px;
+}
+.cloud-2{
+	background: url('../images/cloud-2.png') no-repeat;
+	height: 78px;
+	width: 202px;
+	top: 35px;
+	right: 150px;
+}
+
+// Second animation items
+.bg-2{
+	background-color: $color-2;
+}
+.rocket{
+	background: url('../images/rocket.png') no-repeat;
+	height: 364px;
+	width: 293px;
+	bottom: 200px;
+	left: 145px;
+}
+.smoke{
+	background: url('../images/rocket-smoke.png') no-repeat;
+	height: 238px;
+	width: 322px;
+	bottom: -10px;
+	left: 128px;
+}
+.stars{
+	background: url('../images/stars.png') no-repeat;
+	height: 308px;
+	width: 433px;
+	top: 50px;
+	left: 105px;	
+}
+.cloud-3{
+	background: url('../images/cloud-3.png') no-repeat;
+	height: 175px;
+	width: 740px;
+	top: 143px;
+	left: -130px;	
+}
+.cloud-4{
+	background: url('../images/cloud-3.png') no-repeat right top;
+	@include background-size($size:450px auto);
+	height: 40px;
+	width: 150px;
+	top: 90px;
+	right: 90px;	
+}
+
+// third anmation items
+.man{
+	background: url('../images/man.png') no-repeat;
+	height: 599px;
+	width: 459px;
+	bottom: 0px;
+	left: 30px;
+}
+.tie{
+	background: url('../images/tie.png') no-repeat;
+	height: 61px;
+	width: 126px;
+	bottom: 60px;
+	left: 193px;
+}
+
+@include bp(sm){
+	.animate-wrap>div{
+		display: none;
+	}
+}

@@ -1,0 +1,445 @@
+/* System Default sytles overrides */
+#dynamic-container, #content-container, #job-dynamic-container{
+	padding: 0;
+
+}
+
+#dynamic-container, #content-container, #job-dynamic-container{
+	&.hs_section{
+		padding: 80px 0;
+		@include bp(sm){
+			padding: 40px 0px;
+		}
+	}
+}
+
+#content .content-holder,
+#content .uniForm{
+	max-width: 780px;
+	margin: 0 auto;
+	p{
+		text-align: center;
+	}
+	.newsIndex{
+		text-align: left;
+		p{
+			text-align: left;	
+		}
+	}
+}
+.newDash{
+
+	#content{
+		.content-holder{
+			max-width: 1200px;
+			p{
+				text-align: left;
+			}
+		}
+	}
+	h2{
+		font-size: 29px;
+		text-align: left;
+		&:after{
+			display: none;
+		}
+	}
+}
+
+.table-bordered{
+	border: none;
+}
+.form-input table tr td{
+	padding: 0;
+	border: none;
+}
+
+.side-heading{
+	font: bold 31px/1.3 $bodyfont;
+	color: $color-1;
+	border-bottom:1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+
+#side-drop-menu {
+	margin-top: 1em;
+	ul li{
+		a{
+			border-top: none;
+			color:$color-dark;
+			padding: 5px 0;
+			&:hover{
+				color: $color-1;
+			}
+		}
+	}
+	>li{
+		border-bottom: 1px solid $color-bright - 63;	
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		>a{
+			color:$color-1;
+			font-weight: bold;
+			border-top: none;
+			padding:5px 0;
+			position: relative;
+			&:before{
+				content:'+';
+				display: block;
+				position: absolute;
+				right: 0;
+				top:5px;
+				@include rotate(45deg);
+				@include transition($property:all, $duration:0.4s, $function:ease);
+			}
+			&.closed{
+				&:before{
+					@include rotate(0deg);
+				}
+			}
+		}
+		&.empty{
+			border-bottom: none;
+			margin-bottom: 0px;
+			padding-bottom: 0px;
+		}
+	}
+}
+#side-left li{
+
+}
+#jobsearch-top, .job-navbtns .button{
+	// display: none!important;
+}
+.job-navbtns .filters-button{
+	@include bp(sm){
+		display: block!important;
+		border: 4px solid;
+		padding: 0 15px;
+		margin-top: 10px;
+	}
+}
+.job-navbtns{
+	min-height:50px;
+	overflow: hidden;
+}
+$color-temporary :#ffae00;
+$color-contract :#432392;
+$color-fulltime :#866398;
+$color-parttime :$color-dark;
+$color-casual :$color-2;
+
+.job-holder{
+	background-color: $color-bright - 7;
+	border-left: 15px solid #866398;
+	padding: 30px 15px 30px 40px;
+	margin-bottom: 25px;
+	text-align: left;
+	&.temporary{
+		border-color: $color-temporary;
+		.job-toplink a, a{
+			color:$color-temporary;
+		}
+	}
+	&.contract{
+		border-color: $color-contract;
+		.job-toplink a, a{
+			color:$color-contract;
+		}
+	}
+	&.fulltime{
+		border-color: $color-fulltime;
+		.job-toplink a, a{
+			color:$color-fulltime;
+		}
+	}
+	&.parttime{
+		border-color: $color-parttime;
+		.job-toplink a, a{
+			color:$color-parttime;
+		}
+	}
+	&.casual{
+		border-color: $color-casual;
+		.job-toplink a, a{
+			color:$color-casual;
+		}
+	}
+	@include bp(sm){
+		padding: 15px 15px 15px 15px;
+		border-width: 12px;
+	}
+}
+body.fulltime-jobtype{
+	.inner-banner{ background-color: $color-fulltime; }
+	.apply-now-link a{ background-color: $color-fulltime; border-color: $color-fulltime; }
+	.job-detail-centre h2,
+	.job-ad-optional-heading{ 
+		color:$color-fulltime; 
+	}
+	#map{ border-color: $color-fulltime; }
+}
+body.temporary-jobtype{
+	.inner-banner{ background-color: $color-temporary; }
+	.apply-now-link a{ background-color: $color-temporary; border-color: $color-temporary; }
+	.job-detail-centre h2,
+	.job-ad-optional-heading{ 
+		color:$color-temporary; 
+	}
+	#map{ border-color: $color-temporary; }
+}
+body.casual-jobtype{
+	.inner-banner{ background-color: $color-casual; }
+	.apply-now-link a{ background-color: $color-casual; border-color: $color-casual; }
+	.job-detail-centre h2,
+	.job-ad-optional-heading{ 
+		color:$color-casual; 
+	}
+	#map{ border-color: $color-casual; }
+}
+body.contract-jobtype{
+	.inner-banner{ background-color: $color-contract; }
+	.apply-now-link a{ background-color: $color-contract; border-color: $color-contract; }
+	.job-detail-centre h2,
+	.job-ad-optional-heading{ 
+		color:$color-contract; 
+	}
+	#map{ border-color: $color-contract; }
+}
+body.parttime-jobtype{
+	.inner-banner{ background-color: $color-parttime; }
+	.apply-now-link a{ background-color: $color-parttime; border-color: $color-parttime; }
+	.job-detail-centre h2,
+	.job-ad-optional-heading{ 
+		color:$color-parttime; 
+	}
+	#map{ border-color: $color-parttime; }
+}
+
+.job-holder {
+	.job-toplink a{
+		font: bold 31px/1 $bodyfont;
+		&:hover{
+			color:$color-dark + 50;
+		}
+	}
+	a:hover{
+		color:$color-dark + 50;
+	}
+	@include bp(sm){
+		.job-toplink a{
+			font-size: 27px;
+		}
+	}
+}
+.description-holder {
+	.locandsalary{
+		float: none;
+		width: 100%;
+		font-size: 18px;
+		font-weight: bold;
+		text-transform: uppercase;
+		span{
+			float: left;
+			border-right: 2px solid $color-dark;
+			padding: 0 12px;
+			&:first-child{
+				padding-left: 0;
+			}
+			&:last-child{
+				border-right: none;
+				padding-right: 0;
+			}
+		}
+		@include bp(sm){
+			margin-bottom: 0;
+			span{
+				float: none;
+				padding: 0;
+				border-right: none;
+			}
+		}
+	}
+	.description-text{
+		width: 100%;
+		float: none;
+		padding-top: 20px;
+	}
+}
+.job-rightlinks, .job-breadcrumbs,
+#AdvancedSearchFilter_PnlSalary .divSalaryCurrency{
+	display:none;
+}
+#liAnnualTab{
+	border-right:2px solid $color-dark;
+}
+
+.switch_options{
+	float: right;
+	div{
+		border: none;
+		background: none;
+		font-size: 40px;
+		padding: 0 9px;
+		color: $color-dark;
+		&.selected{
+			background: none;
+			color:$color-1;
+		}
+	}
+}
+
+.search-query{
+	border-bottom: 1px solid $color-bright - 63;	
+	padding-bottom: 12px;
+	p{
+		background-color: #636363;
+		color:$color-bright;
+		text-transform: uppercase;
+		padding: 8px 12px;
+		font-weight: bold;
+		margin-bottom: 5px;
+		position: relative;
+		&:hover{
+			background-color: $color-dark;
+		}
+	}
+	.red-remove a{
+		color:$color-bright;
+		text-decoration: none;
+		position: absolute;
+		right: 5px;
+		top:30%;
+	}
+}
+.mapFilter .btn{
+	background: none;
+	width:100%;
+	margin-bottom: 1px;
+	border-color: $color-1;
+	&:hover{
+		background-color: $color-1;
+	}
+}
+.btn-primary.disabled, .btn-primary[disabled]{
+	opacity: 0.3;
+}
+.job-navbtns .button a, .search-options .button a{
+	border-radius:0;
+	
+}
+.job-navbtns .button a{
+	@include bp(md){
+		padding: 5px 10px;		
+	}
+}
+
+//advertiser forms
+.form-all, .form-header-group{
+	h2{
+		font-size: 29px;
+		&:after{ display:none; }
+	}
+}
+.form-line.noformating label, .form-line.noformating span, .form-line .form-input span, .form-line span span, .form-line span + span,
+.ctrlHolder.noformating label, .ctrlHolder.noformating span, .ctrlHolder .form-input span, .ctrlHolder span span, .ctrlHolder span + span{
+	position: static;
+}
+.form-buttons-wrapper{
+	padding-top: 30px;
+}
+//google map
+#resultsMap{
+	border: 10px solid $color-1;
+}
+.markerInfoWrapper{
+	text-align: center;
+}
+.mapPopupJobTitle{
+	font-size: 21px;
+	&:after{
+		display: none;
+	}
+}
+
+#ctl00_ContentPlaceHolder1_pnlLogin{
+	.ctrlHolder{
+		float: left;
+		width: 49%;
+		margin-right: 2%;
+		&:nth-child(even){
+			margin-right: 0;
+		}
+		@include bp(sm){
+			float: none;
+			width: 100%;
+		}
+	}
+}
+
+
+.relNav-wrap{
+	&.custom-select{
+		display: none;
+	}
+	select{
+		display: none;
+	}
+	@include bp(sm){
+		&.custom-select{
+			display: block;
+		}
+		margin: 15px;
+		.navigation{
+			background: none;
+			display: none;
+		}	
+	}
+}
+
+.section-heading{
+	white-space:normal;
+	display:block;
+}
+#divTo{
+	margin-top: 20px;
+	@include bp(xs){
+		margin-top: 0;
+		margin-bottom:15px;
+		line-height: 1;
+		text-align: center;
+		width: 100%;
+	}
+}
+
+#advanced_search-holder #search-salary #divSalaryFrom,
+#advanced_search-holder #search-salary #divSalaryTo{
+	position: relative;
+	float: left;
+	width:46%;
+	@include bp(xs){
+		width: 100%;
+	}
+}
+#advanced_search-holder #search-salary #divSalaryFrom input,
+#advanced_search-holder #search-salary #divSalaryTo input{
+	width: 100%;
+}
+
+#advanced_search-holder #search-salary #divSalaryFrom span,
+#advanced_search-holder #search-salary #divSalaryTo span{
+	position: absolute;
+	top: 11px;
+}
+
+.modal-header .close{
+	margin-top: -15px;
+	margin-right: -9px;
+	font-size: 27px;
+}
+
+.memberlogin-links{
+	text-align: center;
+}

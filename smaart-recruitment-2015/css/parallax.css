@@ -1,0 +1,124 @@
+/* 
+Scrollr parallax css file.
+** Note : This file must be placed in same domain server, so please upload it in media not in the image server; 
+*/
+
+
+.balloon{
+	-skrollr-animation-name: balloon
+}
+@-skrollr-keyframes balloon {
+	bottom-top{
+		transform:translateY(240px);
+	}
+	top-bottom{
+		transform:translateY(-100px);
+	}
+}
+
+.mountain{
+	-skrollr-animation-name: mountain
+}
+@-skrollr-keyframes mountain {
+	bottom-top{
+		transform:translateY(0px);
+	}
+	top-bottom{
+		transform:translateY(50px);
+	}
+}
+
+.cloud-1{
+	-skrollr-animation-name: cloud-1
+}
+@-skrollr-keyframes cloud-1 {
+	bottom-top{
+		transform:translateY(120px);
+	}
+	top-bottom{
+		transform:translateY(0px);
+	}
+}
+.cloud-2{
+	-skrollr-animation-name: cloud-2
+}
+@-skrollr-keyframes cloud-2 {
+	bottom-top{
+		transform:translate(100px,-80px);
+	}
+	top-bottom{
+		transform:translate(-100px,20px);
+	}
+}
+
+.rocket{
+	-skrollr-animation-name: rocket
+}
+@-skrollr-keyframes rocket {
+	bottom-top{
+		transform:translateY(170px);
+	}
+	top-bottom{
+		transform:translateY(-100px);
+	}
+}
+
+.smoke{
+	-skrollr-animation-name: smoke
+}
+@-skrollr-keyframes smoke {
+	bottom-top{
+		transform:translateY(0px);
+	}
+	top-bottom{
+		transform:translateY(100px);
+	}
+}
+.cloud-3{
+	-skrollr-animation-name: cloud-3
+}
+@-skrollr-keyframes cloud-3 {
+	bottom-top{
+		transform:translateY(-50px);
+	}
+	top-bottom{
+		transform:translateY(50px);
+	}
+}
+
+.cloud-4{
+	-skrollr-animation-name: cloud-4
+}
+@-skrollr-keyframes cloud-4 {
+	bottom-top{
+		transform:translate(100px,-80px);
+	}
+	top-bottom{
+		transform:translate(-100px,20px);
+	}
+}
+
+.tie{
+	-skrollr-animation-name: tie
+}
+@-skrollr-keyframes tie {
+	start{
+		transform: rotate(0deg);
+	}
+	top-bottom{
+		transform: rotate(360deg);
+	}
+}
+
+#widget-search{
+	-skrollr-animation-name: widgetsearch
+}
+@-skrollr-keyframes widgetsearch {
+	start{
+		position: static;
+	}
+	100-top{
+		position: fixed;
+	}
+}
+

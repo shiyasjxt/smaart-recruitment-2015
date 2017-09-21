@@ -1,0 +1,311 @@
+/* Form elements */
+
+input::-webkit-input-placeholder{
+    text-transform: capitalize;
+}
+textarea::-webkit-input-placeholder {
+    text-transform: capitalize;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+    text-transform: capitalize;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    text-transform: capitalize;
+}
+
+.btn, input.btn{
+	font: 14px/1 $headfont;
+	border: 5px solid $color-1;
+	border-radius: 0;
+	min-width:123px;
+	color: $color-1;
+	padding: 10px 10px 8px;
+	&:hover{
+		background-color: $color-1;
+		color: $color-bright;
+	}
+}
+#btn-widget-search{
+	background-color: $color-2;
+	border: none;
+	color:$color-bright;
+	font-size: 16px;
+	padding: 18px 25px 18px 10px;
+	position: relative;
+	&:after{
+		content: "\e91c";
+		font: bold 20px/0.8 'smart-icons';
+		position: absolute;
+		right: 15px;
+		top: 17px;
+	}
+	&:hover{
+		background: $color-2;
+		color: $color-dark;
+	}
+	@include bp(md){
+		
+		padding-left: 15px;
+		&:after{
+			right: 10px;
+		}
+	}
+}
+.t2 #btn-widget-search{
+	background-color: $color-dark;
+	&:hover, &:focus{
+		color:#fff;
+	}
+}
+
+.custom-select,
+.uniForm .custom-select, 
+#ctl00_ContentPlaceHolder1_ucJobAlert1_upProfession li,
+#ctl00_ContentPlaceHolder1_ucJobAlert1_UpdatePanel1 li:first-child{
+	position: relative;
+	&:before{
+		font-family: 'smart-icons';
+		content: '\e913';
+		color: $color-dark;
+		font-size: 22px;
+		font-weight: normal;
+		top: 17px;
+		right: 15px;
+		position: absolute;
+		@include bp(md){
+			right: 8px;
+		}
+	}
+	
+}
+
+.uniForm .custom-select,
+#ctl00_ContentPlaceHolder1_ucJobAlert1_upProfession li,
+#ctl00_ContentPlaceHolder1_ucJobAlert1_UpdatePanel1 li:first-child,
+.form-line{
+	margin-bottom: 20px!important;
+}
+.uniForm .custom-select, 
+.uniForm ul.alternate li,
+.uniForm .rows,
+.form-line{
+	position: relative;
+	span{
+		position: absolute;
+		top: 11px;
+		left: 17px;
+		color:$color-1;
+		font:11px/1 $headfont;
+		text-transform: uppercase;
+	}
+	>span{
+		width: 100%;
+	}
+}
+.mapFilter{
+	padding: 0;
+	margin-bottom: 5px;
+}
+.form-line, .mapFilter.custom-select{
+	position: relative;
+	label{
+		position: absolute;
+		top: 11px;
+		left: 17px;
+		color:$color-1;
+		font:11px/1 $headfont;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	.form-required{
+		left: auto;
+		right: 16px;
+		font-size: 26px;
+		font-family: $bodyfont;
+		position: absolute!important;
+		width: auto!important;
+	}
+}
+
+#ctl00_ContentPlaceHolder1_ucJobAlert1_upProfession ul.alternate{
+	li:before{
+		top:43px;
+	}
+}
+
+.uniForm .ctrlHolder input, .uniForm textarea, .uniForm select, .uniForm select,
+.login-main-holder .form-input input, .custom-select select,
+.form-line .form-input input, .form-line .form-input select, .form-line .form-input textarea,
+#jxt-wrapper-bootstrap .form-line .form-control, #jxt-wrapper-bootstrap .tab-content .form-control{
+	display: block;
+    width: 100%;
+    height: 61px;
+    padding: 21px 12px 9px;
+    border: 3px solid darken($color-bright,20%);
+    border-radius: 0;
+    line-height: 1.3;
+    font-size: 20px;
+    vertical-align: middle;
+    box-shadow: none;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    box-sizing: border-box;
+    background: none;
+    color: $color-dark;
+    margin-bottom: 0;
+}
+
+//overriding the advertiser forms after login
+#jxt-wrapper-bootstrap{
+	.tab-content .form-control{
+		height: 45px;
+		padding-top: 9px;
+	}
+	.form-line .custom-select.col-md-6{
+		margin-bottom: 10px;
+		&:before{
+			right: 27px;
+		}
+	}
+	.form-line span{
+		top: 0;
+		right: 24px;
+	}
+}
+
+
+.uniForm .ctrlHolder input[type="checkbox"], .uniForm .ctrlHolder input[type="radio"],
+li.form-line input[type="checkbox"], li.form-line input[type="radio"], li.form-line input[type="image"]{
+	height: auto;
+	display: inline-block;
+	width:auto;
+	margin: 0 10px;
+}
+.custom-select select{
+	position: relative;
+	z-index: 10;
+}
+.ctrlHolder{
+	position: relative;
+	margin-bottom: 15px;
+	label{
+		position: absolute;
+		width:100%;
+		text-align: left;
+		padding: 0 18px;
+		top:13px;
+		color:$color-1;
+		font:11px/1 $headfont;
+	}
+	.form-required{
+		position: absolute;
+		color:$color-1;
+		font-size: 26px;
+		font-family: $bodyfont;
+		right: 5px;
+		top: 11px;
+	}
+	.form-radio2 {
+		label{
+			display: inline;
+			position: static;
+		}
+		input{
+			display: inline-block;
+			width: auto;
+			margin-right: 10px;
+		}
+	}
+}
+#divSalaryFrom input, #divSalaryTo input{
+	padding-left: 13px;
+}
+
+.fb-button{
+	border: 3px solid #ccc;
+    position: relative;
+}
+.fb-button input[type="file"]{
+	border: none;
+    height: 54px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+}
+.fb-button .fb-button-fake{
+	position: absolute!important;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    color: $color-dark;
+    cursor: pointer;
+    font-family: Quicksand;
+    font-size: 18px;
+    text-transform: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    text-indent: 15px;
+    border-right: 60px solid #ccc;
+}
+
+.uniForm h3{
+	color:$color-1;
+	clear: both;
+	font-size: 29px;
+	padding-top: 30px;
+	text-align: center;
+}
+.aligncenter {
+	input, select, textarea{
+		text-align: center;
+	}
+}
+
+.uniForm .fb-textarea textarea,
+li.form-line .form-input textarea{
+	min-height:110px;
+}
+#ctl00_ContentPlaceHolder1_pnlSendEmailAlerts .label{ display:none; }
+.uniForm .mini-main-alert input{
+	display:inline-block;
+	width:auto;
+	margin-right: 10px;
+}
+.buttonHolder, .member-submitbottom{
+	text-align: center;
+}
+
+
+.color-theme-5{
+	input, .uniForm  input, .uniForm .fb-textarea textarea,
+	.uniForm .fb-dropdown select, .uniForm .fb-listbox select{
+		border-color:$color-bright;
+		color:$color-bright;
+	}
+	.fb-grouplabel{
+		text-align: center;
+		label{ color:$color-bright; }
+		.required{ color:$color-bright; }
+	}
+	#fb-submit-button{
+		border-color: $color-dark;
+		color: $color-dark;
+		&:hover{
+			background-color: $color-dark;
+			color: $color-bright;
+		}
+	}
+}
+
+#refer_friend_iframe, #submit_resume_iframe, #enquiry_iframe, #map, #submit_vacancy_iframe{
+	width: 100%;
+    background: transparent;
+    outline: none;
+    overflow: hidden;
+    border: none;
+}

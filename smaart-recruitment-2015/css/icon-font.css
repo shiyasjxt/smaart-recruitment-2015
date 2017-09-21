@@ -1,0 +1,118 @@
+/*@font-face {
+	font-family: 'smart-icons';
+	src:url('../fonts/smart-icons.eot?5bx2i9');
+	src:url('../fonts/smart-icons.eot?5bx2i9#iefix') format('embedded-opentype'),
+		url('../fonts/smart-icons.ttf?5bx2i9') format('truetype'),
+		url('../fonts/smart-icons.woff?5bx2i9') format('woff'),
+		url('../fonts/smart-icons.svg?5bx2i9#smart-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}*/
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'smart-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-it-support:before {
+  content: "\e916";
+}
+.icon-services:before {
+	content: "\e919";
+}
+.icon-contact-us:before {
+	content: "\e900";
+}
+.icon-list-2:before {
+	content: "\e901";
+}
+.icon-map-view:before {
+	content: "\e902";
+}
+.icon-tips-tricks-tests:before {
+	content: "\e90f";
+}
+.icon-abc:before {
+	content: "\e904";
+}
+.icon-bulb:before {
+	content: "\e905";
+}
+.icon-gallery:before {
+	content: "\e906";
+}
+.icon-list:before {
+	content: "\e907";
+}
+.icon-typing:before {
+	content: "\e908";
+}
+.icon-attach:before {
+	content: "\e909";
+}
+.icon-phone:before {
+	content: "\e90a";
+}
+.icon-bag:before {
+	content: "\e90b";
+}
+.icon-health:before {
+	content: "\e90c";
+}
+.icon-tie:before {
+	content: "\e90d";
+}
+.icon-pie:before {
+	content: "\e90e";
+}
+.icon-target:before {
+	content: "\e903";
+}
+.icon-calculator:before {
+	content: "\e910";
+}
+.icon-contact:before {
+	content: "\e911";
+}
+.icon-team:before {
+	content: "\e912";
+}
+.icon-arrow-prev:before {
+	content: "\e91b";
+}
+.icon-arrow-next:before {
+	content: "\e91c";
+}
+.icon-arrow-up:before {
+	content: "\e91d";
+}
+.icon-arrow-down:before {
+	content: "\e913";
+}
+.icon-alert:before {
+	content: "\e914";
+}
+.icon-clients:before {
+	content: "\e915";
+}
+.icon-contact2:before {
+	content: "\e916";
+}
+.icon-play:before {
+	content: "\e917";
+}
+.icon-resume:before {
+	content: "\e918";
+}
+.icon-view:before {
+	content: "\e91a";
+}
+

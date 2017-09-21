@@ -1,0 +1,23 @@
+//color used
+$color-1: #00acd4; //blue
+$color-2: #f47929; //orange
+$color-3: #866398; //purple
+
+$color-bright: #fff; 	// white
+$color-dark: #000; 	// black
+
+// Text Selection
+$selectionColor: $color-1;
+
+// Links
+$linkColor: $color-1; // white
+$linkHoverColor: $color-2; //red
+
+
+//@include fontface('BigJohn', '../fonts', 'big_john'); 
+//@include fontface('SlimJoe', '../fonts', 'slim_joe'); 
+
+// Fonts
+$bodyfont: "Quicksand","Myriad Pro",Arial, Helvetica, sans-serif;
+$headfont: "BigJohn", "Arial Black", Arial, Helvetica, sans-serif;
+$thinfont: "SlimJoe","Myriad Pro",Arial, Helvetica, sans-serif;
